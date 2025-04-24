@@ -15,7 +15,7 @@ export default async function middleware(req: NextRequest) {
     //   const session = await decrypt(cookie)
 
     //FIXME: Action authentication check after login.
-    const isAuthenticated = false;
+    const isAuthenticated = true;
  
   // 4. Redirect to /login if the user is not authenticated
   if (isProtectedRoute && !isAuthenticated) {

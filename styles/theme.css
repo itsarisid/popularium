@@ -114,14 +114,18 @@ body {
   .theme-color-mono,
   .theme-mono-color-scaled {
     --font-sans: var(--font-mono);
-    --primary: var(--color-lime-400);
+    --primary: var(--color-lime-700);
     --primary-foreground: var(--color-neutral-50);
-    --sidebar-primary:var(--color-lime-400);
+    --sidebar-primary:var(--color-lime-700);
+    --tw-gradient-from:var(--color-neutral-50);
+    --tw-gradient-stops:var(--color-neutral-50);
   
     @variant dark {
-      --primary: var(--color-lime-400);
+      --primary: var(--color-lime-500);
       --primary-foreground: var(--color-neutral-50);
-      --sidebar-primary:var(--color-lime-400);
+      --sidebar-primary:var(--color-lime-500);
+      --tw-gradient-from:var(--color-neutral-50);
+      --tw-gradient-stops:var(--color-neutral-50);
     }
   
     .rounded-xs,

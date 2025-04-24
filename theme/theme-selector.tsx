@@ -49,7 +49,7 @@ const MONO_THEMES = [
     value: 'mono-scaled'
   },
   {
-    name: 'Mono Color',
+    name: 'Color',
     value: 'mono-color-scaled'
   },
   {
