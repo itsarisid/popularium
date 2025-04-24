@@ -6,7 +6,7 @@ import { cookies } from "next/headers";
 import NextTopLoader from "nextjs-toploader";
 import "@/styles/globals.css";
 import "@/styles/theme.css";
-import ThemeProvider from "@/template/theme-provider";
+import ThemeProvider from "@/theme/theme-provider";
 import Providers from "../provider/providers";
 import { siteConfig } from "@/config/site";
 
@@ -40,6 +40,9 @@ export default async function AppLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
+      <title>
+        Popularium
+      </title>
       <head>
         <script
           dangerouslySetInnerHTML={{

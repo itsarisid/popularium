@@ -1,6 +1,6 @@
 export const siteConfig = {
-    name:"Timeless",
-    title: "Timeless",
+    name:"Popularium",
+    title: "Popularium",
     description: "Exploring new possibilities",
     version:"1.0.0",
     url: "https://timeless.com",

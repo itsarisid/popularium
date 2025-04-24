@@ -15,7 +15,7 @@ export default function Providers({
   return (
     <>
       <ActiveThemeProvider initialTheme={activeThemeValue}>
-        <SidebarProvider>
+        <SidebarProvider defaultOpen={false}>
           <AppSidebar />
           <SidebarInset>
             <Header />
