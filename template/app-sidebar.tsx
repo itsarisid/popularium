@@ -1,6 +1,6 @@
 "use client";
 import * as React from "react";
-import { NavUser } from "@/template/nav-user";
+import { NavUser } from "./nav-user";
 import {
   Sidebar,
   SidebarContent,

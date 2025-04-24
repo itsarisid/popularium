@@ -1,6 +1,5 @@
-
+import RecoilContextProvider from "@/provider/recoil-context-provider";
 import AppLayout from "@/template/app-layout";
-import { RecoilRoot } from "recoil";
 export default async function RootLayout({
   children,
 }: {
@@ -8,10 +7,7 @@ export default async function RootLayout({
 }) {
   return (
     <AppLayout>
-      {/* <RecoilRoot>
-        {children}
-        </RecoilRoot> */}
-         {children}
+         <RecoilContextProvider>{children}</RecoilContextProvider>
     </AppLayout>
   );
 }
