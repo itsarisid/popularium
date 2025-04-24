@@ -47,6 +47,14 @@ const MONO_THEMES = [
   {
     name: 'Mono',
     value: 'mono-scaled'
+  },
+  {
+    name: 'Mono Color',
+    value: 'mono-color-scaled'
+  },
+  {
+    name: 'Hand',
+    value: 'handwriting-scaled'
   }
 ];
 

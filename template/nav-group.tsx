@@ -111,6 +111,7 @@ const SidebarMenuCollapsible = ({
                 <SidebarMenuSubButton
                   asChild
                   isActive={checkIsActive(href, subItem)}
+                  className='hover:text-primary'
                 >
                   <Link href={subItem.url} onClick={() => setOpenMobile(false)}>
                     {subItem.icon && <subItem.icon />}
@@ -151,7 +152,7 @@ const SidebarMenuCollapsedDropdown = ({
           </SidebarMenuButton>
         </DropdownMenuTrigger>
         <DropdownMenuContent side='right' align='start' sideOffset={4}>
-          <DropdownMenuLabel>
+          <DropdownMenuLabel className='hover:text-primary'>
             {item.title} {item.badge ? `(${item.badge})` : ''}
           </DropdownMenuLabel>
           <DropdownMenuSeparator />

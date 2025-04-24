@@ -1,8 +1,8 @@
 import React from 'react';
 import { SidebarTrigger } from '../components/ui/sidebar';
 import { Separator } from '@radix-ui/react-separator';
-import { ModeToggle } from './theme-toggle';
-import { ThemeSelector } from './theme-selector';
+import { ModeToggle } from '../theme/theme-toggle';
+import { ThemeSelector } from '../theme/theme-selector';
 import { Breadcrumbs } from '../components/elements/breadcrumbs';
 
 export default function Header() {
