@@ -1,4 +1,3 @@
-import { redirect } from "next/navigation";
 import OverViewLayout from "./overview/layout";
 import Sales from "./overview/@sales/page";
 import Stats from "./overview/@pie_stats/page";

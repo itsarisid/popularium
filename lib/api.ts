@@ -13,7 +13,7 @@ instance.defaults.headers.common = {
 //instance.defaults.withCredentials=true;
 
 instance.interceptors.request.use(
-  (config: any) => {
+  (config) => {
     //TODO: Request Interceptors
     return config;
   },

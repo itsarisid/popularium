@@ -1,3 +1,4 @@
+import { SidebarData } from '@/models/types'
 import {
     IconBarrierBlock,
     IconBrowserCheck,
@@ -13,7 +14,6 @@ import {
     IconUserOff,
   } from '@tabler/icons-react'
   import { Gauge, Fingerprint , Egg, Bug } from 'lucide-react'
-  import { type SidebarData } from './types'
   
   export const sidebarData: SidebarData = {
     user: {

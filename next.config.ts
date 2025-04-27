@@ -1,11 +1,10 @@
 import type { NextConfig } from "next";
 
-const nextConfig = {
+const nextConfig: NextConfig = {
   env: {
     BASE_URL: "https://localhost:9999/api/",
   },
   reactStrictMode: true,
-  swcMinify: true,
 };
 
 export default nextConfig;

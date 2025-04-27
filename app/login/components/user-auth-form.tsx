@@ -19,8 +19,9 @@ import http from "@/lib/api";
 import { ENDPOINTS } from "@/constants/endpoints";
 import { AlertError } from "@/components/elements/alert-error";
 import { LoginModel } from "@/models/login";
+import { cn } from "@/lib/utils";
 
-interface UserAuthFormProps extends HTMLAttributes<HTMLDivElement> {}
+type UserAuthFormProps = HTMLAttributes<HTMLDivElement>;
 
 export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -33,13 +34,13 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
     event.preventDefault();
     setIsLoading(true);
 
-    let data = JSON.stringify({
+    const data = JSON.stringify({
       email: "khanalex301@gmail.com",
       password: "Sprinkle@832",
       rememberMe: true,
     });
 
-    let config = {
+    const config = {
       method: "post",
       maxBodyLength: Infinity,
       url: ENDPOINTS.login,
@@ -50,15 +51,17 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
       .request(config)
       .then((response: { data: LoginModel }) => {
         const { message } = response.data;
+        console.log("🚀 ~ file: user-auth-form.tsx:54 ~ message:", message)
         router.push("/dashboard");
       })
-      .catch((error: any) => {
+      .catch((error) => {
+        console.log("🚀 ~ file: user-auth-form.tsx:58 ~ error:", error)
         setError(true);
       })
       .finally(() => setIsLoading(false));
   }
   return (
-    <Card className="w-full">
+    <Card className={cn(className, "w-full")} {...props}>
       <CardHeader>
         <CardTitle className="text-2xl text-center">Login</CardTitle>
         <CardDescription className="text-center">
