@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Popularium",
-  description: "New generation of carbon coding",
+  description: "New generation of Dashboard",
 };
 
 export default function RootLayout({
