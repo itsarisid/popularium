@@ -15,7 +15,7 @@ import {
 
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { buttonVariants } from "../ui/button";
-import { LogIn, Menu, PowerCircle, PowerCircleIcon, PowerIcon } from "lucide-react";
+import {  Menu, PowerIcon } from "lucide-react";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import InlineThemeToggle from "@/theme/inline-theme-toggle";
@@ -129,13 +129,13 @@ export const Navbar = () => {
 
           <div className="hidden md:flex gap-2">
             <InlineThemeToggle />
-            <Link
-              rel="noreferrer noopener"
-              href="./login"
-              className={`border ${buttonVariants({ variant: "ghost" })}`}
-            >
-              <PowerIcon className="mr-2 w-5 h-5" />
-            </Link>
+              <Link
+                rel="noreferrer noopener"
+                href="./login"
+                className={`items-center hover:text-lime-500 ${buttonVariants({ variant: "ghost" })}`}
+              >
+                <PowerIcon className="mr-2 w-5 h-5" />
+              </Link>
           </div>
         </NavigationMenuList>
       </NavigationMenu>

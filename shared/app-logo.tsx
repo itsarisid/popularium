@@ -7,12 +7,13 @@ type AppLogoProps = {
 };
 
 const AppLogo = forwardRef<HTMLAnchorElement, AppLogoProps>(
-  ({ className, ...props },ref) => {
+  ({ className, ...props }, ref) => {
     return (
       <Egg 
       strokeWidth={3} absoluteStrokeWidth
         className={cn(
           "group-hover:scale-110",
+          "text-primary",
           className
         )}
         {...props}
