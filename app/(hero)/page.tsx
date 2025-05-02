@@ -21,7 +21,7 @@ export default function Home() {
        <Hero />
       <Sponsors />
       <About />
-      {/*<HowItWorks />
+      <HowItWorks />
       <Features />
       <Services />
       <Cta />
@@ -30,7 +30,7 @@ export default function Home() {
       <Pricing />
       <Newsletter />
       <FAQ />
-      <Footer /> */}
+      <Footer />
       <ScrollToTop />
     </>
   );
