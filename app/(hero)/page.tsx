@@ -18,8 +18,8 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <Sponsors />
+       <Hero />
+      {/*<Sponsors />
       <About />
       <HowItWorks />
       <Features />
@@ -30,7 +30,7 @@ export default function Home() {
       <Pricing />
       <Newsletter />
       <FAQ />
-      <Footer />
+      <Footer /> */}
       <ScrollToTop />
     </>
   );
