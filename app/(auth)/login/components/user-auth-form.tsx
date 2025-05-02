@@ -15,11 +15,11 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Loader } from "lucide-react";
-import http from "@/lib/api";
-import { ENDPOINTS } from "@/constants/endpoints";
+import { ENDPOINTS } from "@/api/endpoints";
 import { AlertError } from "@/components/elements/alert-error";
 import { LoginModel } from "@/models/login";
 import { cn } from "@/lib/utils";
+import {Http} from '@/api/api-client'
 
 type UserAuthFormProps = HTMLAttributes<HTMLDivElement>;
 
@@ -34,21 +34,11 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
     event.preventDefault();
     setIsLoading(true);
 
-    const data = JSON.stringify({
-      email: "khanalex301@gmail.com",
-      password: "Sprinkle@832",
-      rememberMe: true,
-    });
-
-    const config = {
-      method: "post",
-      maxBodyLength: Infinity,
-      url: ENDPOINTS.login,
-      data: data,
-    };
-
-    http
-      .request(config)
+    Http
+      .post(ENDPOINTS.login,JSON.stringify({
+        email: "khanalex301@gmail.com",
+        password: "Sprinkle@832",
+      }))
       .then((response: { data: LoginModel }) => {
         const { message } = response.data;
         console.log("🚀 ~ file: user-auth-form.tsx:54 ~ message:", message)
