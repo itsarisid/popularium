@@ -1,4 +1,5 @@
 'use client';
+import { JSX } from "react";
 import { Card, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import { MagnifierIcon, WalletIcon, ChartIcon } from "./Icons";
 import cubeLeg from "@/assets/cube-leg.png";

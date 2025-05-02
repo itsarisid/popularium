@@ -28,7 +28,7 @@ export const HeroCards = () => {
               alt=""
               src="https://github.com/shadcn.png"
             />
-            <AvatarFallback>SH</AvatarFallback>
+            <AvatarFallback>SK</AvatarFallback>
           </Avatar>
 
           <div className="flex flex-col">
@@ -50,10 +50,9 @@ export const HeroCards = () => {
             height={58}
             className="absolute grayscale-[0%] -top-12 rounded-full w-24 h-24 aspect-square object-cover"
           />
-          <CardTitle className="text-center">{siteConfig.authors[0].name}</CardTitle>
-          <CardDescription className="font-normal text-primary">
-           {siteConfig.authors[0].description}
-          </CardDescription>
+          
+            <CardTitle className="text-lg">{siteConfig.authors[0].name}</CardTitle>
+            <CardDescription>@{siteConfig.authors[0].description}</CardDescription>
         </CardHeader>
 
         <CardContent className="text-center pb-2">

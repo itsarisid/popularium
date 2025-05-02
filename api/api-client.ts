@@ -1,16 +1,18 @@
-import axios from "axios";
+
+import axios, { AxiosError, HttpStatusCode } from "axios";
 const instance = axios.create();
 
 instance.defaults.baseURL = process.env.BASE_URL;
 
-//instance.defaults.timeout = 2500;
+instance.defaults.timeout = 2500;
 
 instance.defaults.headers.common = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'POST, PUT, PATCH, GET, DELETE, OPTIONS',
+  'Access-Control-Allow-Headers': '*',
   "Content-Type": "application/json",
   accept: "json",
 };
-
-//instance.defaults.withCredentials=true;
 
 instance.interceptors.request.use(
   (config) => {
@@ -31,6 +33,7 @@ instance.interceptors.response.use(
   }
 );
 
-export const http = instance;
+const Http = instance;
+export type HttpError = typeof AxiosError;
 
-export default http;
+export { Http, HttpStatusCode };

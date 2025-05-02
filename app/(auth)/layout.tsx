@@ -1,12 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import { fontVariables } from "@/lib/font";
 import "@/styles/globals.css";
-import "@/styles/index.css";
 import { siteConfig } from "@/config/site";
 import { ThemeProvider } from "next-themes";
 import { cn } from "@/lib/utils";
 import { cookies } from "next/headers";
-import NextTopLoader from "nextjs-toploader";
 
 export const metadata: Metadata = { ...siteConfig };
 
@@ -29,13 +27,12 @@ export default async function RootLayout({
     <html lang="en" suppressHydrationWarning={true}>
       <body  suppressHydrationWarning={true}
       className={cn(
-        "bg-background font-sans antialiased",
+        "bg-background overflow-hidden overscroll-none font-sans antialiased",
         activeThemeValue ? `theme-${activeThemeValue}` : "",
         isScaled ? "theme-scaled" : "",
         fontVariables
       )}
       >
-        <NextTopLoader color="hsl(var(--primary))" />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
