@@ -6,12 +6,12 @@ import { Link } from "lucide-react";
 
 export const Hero = () => {
   return (
-    <section id="hero" className="container mx-auto grid grid-cols-2 place-items-center-safe py-16 gap-3">
+    <section className="container mx-auto grid lg:grid-cols-2 place-items-center py-20 md:py-32 gap-10">
       <div className="text-center lg:text-start space-y-6">
         <main className="text-5xl md:text-6xl font-bold">
           <h1 className="inline">
             <span className="inline bg-gradient-to-r from-[#F596D3]  to-[#D247BF] text-transparent bg-clip-text">
-              IIWI
+              Carbon
             </span>{" "}
             landing page
           </h1>{" "}
