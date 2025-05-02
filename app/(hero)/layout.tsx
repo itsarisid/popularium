@@ -1,25 +1,41 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import ThemeProvider from "@/theme/theme-provider";
+import type { Metadata, Viewport } from "next";
+import { fontVariables } from "@/lib/font";
 import "@/styles/globals.css";
 import "@/styles/index.css";
+import { siteConfig } from "@/config/site";
+import { ThemeProvider } from "next-themes";
+import { cn } from "@/lib/utils";
+import { cookies } from "next/headers";
+import NextTopLoader from "nextjs-toploader";
 
-const inter = Inter({ subsets: ["latin"] });
+export const metadata: Metadata = { ...siteConfig };
 
-export const metadata: Metadata = {
-  title: "Popularium",
-  description: "New generation of Dashboard",
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+    const cookieStore = await cookies();
+  const activeThemeValue = cookieStore.get("active_theme")?.value;
+  const isScaled = activeThemeValue?.endsWith("-scaled");
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <body className={inter.className} suppressHydrationWarning={true}>
-        {/* <NextTopLoader color="hsl(var(--primary))" /> */}
+      <body  suppressHydrationWarning={true}
+      className={cn(
+        "bg-background font-sans antialiased",
+        activeThemeValue ? `theme-${activeThemeValue}` : "",
+        isScaled ? "theme-scaled" : "",
+        fontVariables
+      )}
+      >
+        <NextTopLoader color="hsl(var(--primary))" />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
