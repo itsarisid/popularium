@@ -77,7 +77,7 @@ export const Pricing = () => {
   return (
     <section
       id="pricing"
-      className="container py-24 sm:py-32"
+      className="container mx-auto py-24 sm:py-32"
     >
       <h2 className="text-3xl md:text-4xl font-bold text-center">
         Get
