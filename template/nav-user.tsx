@@ -27,8 +27,8 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  useSidebar,
 } from "@/components/ui/sidebar"
+import { UserThemeSelector } from "@/theme/user-theme-selector"
 
 export function NavUser({
   user,
@@ -39,7 +39,6 @@ export function NavUser({
     avatar: string
   }
 }) {
-  const { isMobile } = useSidebar()
 
   return (
     <SidebarMenu>
@@ -63,7 +62,7 @@ export function NavUser({
           </DropdownMenuTrigger>
           <DropdownMenuContent
             className="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg"
-            side={isMobile ? "bottom" : "right"}
+            side="bottom"
             align="end"
             sideOffset={4}
           >
@@ -79,6 +78,10 @@ export function NavUser({
                 </div>
               </div>
             </DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuGroup>
+              <UserThemeSelector/>
+            </DropdownMenuGroup>
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
               <DropdownMenuItem>

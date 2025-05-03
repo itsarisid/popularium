@@ -11,6 +11,7 @@ import { TeamSwitcher } from "./team-switcher";
 import { sidebarData } from "@/data/sidebar-data";
 import { NavGroup as NavGroupModel } from "@/models/types";
 import { NavGroup } from "./nav-group";
+import { AppLogo } from "@/shared/app-logo";
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
@@ -25,7 +26,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         )}
       </SidebarContent>
       <SidebarFooter>
-        <NavUser user={sidebarData.user} />
+        {/* <NavUser user={sidebarData.user} /> */}
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>
