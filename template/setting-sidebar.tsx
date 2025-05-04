@@ -1,11 +1,6 @@
-import { Calendar, Home, Inbox, Search, Settings, SettingsIcon } from "lucide-react";
+import { SettingsIcon } from "lucide-react";
 
 import {
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
@@ -19,6 +14,7 @@ export function SettingSidebar() {
           <SidebarMenuButton asChild className="hover:text-primary [&>svg]:size-5">
             <Link href={"/settings"}>
               <SettingsIcon/>
+              <span>Settings</span>
             </Link>
           </SidebarMenuButton>
         </SidebarMenuItem>
