@@ -13,7 +13,7 @@ import {
     IconUserCog,
     IconUserOff,
   } from '@tabler/icons-react'
-  import { Gauge, Fingerprint , Egg, Bug } from 'lucide-react'
+  import { Gauge, Fingerprint , Egg, Bug, SnailIcon } from 'lucide-react'
   
   export const sidebarData: SidebarData = {
     user: {
@@ -24,7 +24,7 @@ import {
     teams: [
       {
         name: 'Sajid Khan',
-        logo: Egg,
+        logo: SnailIcon,
         plan: '',
       }
     ],
