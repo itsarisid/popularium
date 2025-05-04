@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { Egg } from "lucide-react";
+import { SnailIcon } from "lucide-react";
 import { forwardRef } from "react";
 
 type AppLogoProps = {
@@ -9,8 +9,8 @@ type AppLogoProps = {
 const AppLogo = forwardRef<HTMLAnchorElement, AppLogoProps>(
   ({ className, ...props }, ref) => {
     return (
-      <Egg 
-      strokeWidth={3} absoluteStrokeWidth
+      <SnailIcon
+        strokeWidth={3} absoluteStrokeWidth
         className={cn(
           "group-hover:scale-110",
           "text-primary",
