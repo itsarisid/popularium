@@ -10,7 +10,14 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  { ignores: ['dist'] },
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
+    files: ['**/ui/**/*.ts', '**/ui/**/*.tsx', '**/context/theme-provider.tsx'],
+    rules: {
+      'react-refresh/only-export-components': 'off',
+    },
+  }
 ];
 
 export default eslintConfig;
