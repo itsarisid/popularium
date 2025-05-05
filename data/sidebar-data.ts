@@ -5,7 +5,7 @@ import { SidebarData } from '@/models/types'
     user: {
       name: 'Sajid Khan',
       email: 'sajid@example.com',
-      avatar: '/avatars/shadcn.jpg',
+      avatar: '#',
     },
     teams: [
       {
