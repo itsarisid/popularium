@@ -1,11 +1,11 @@
 import { SidebarData } from '@/models/types'
-  import { Gauge, SnailIcon } from 'lucide-react'
+  import { Gauge, SnailIcon, SquareUserRound } from 'lucide-react'
   
   export const sidebarData: SidebarData = {
     user: {
       name: 'Sajid Khan',
       email: 'sajid@example.com',
-      avatar: '/avatars/shadcn.jpg',
+      avatar: '#',
     },
     teams: [
       {
@@ -22,6 +22,11 @@ import { SidebarData } from '@/models/types'
             title: 'Dashboard',
             url: '/dashboard',
             icon: Gauge,
+          },
+          {
+            title: 'Users',
+            url: '/users',
+            icon: SquareUserRound,
           },
         ],
       },
