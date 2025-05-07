@@ -38,7 +38,8 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Badge } from "@/components/ui/badge"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { toast } from "sonner"
+import { toast } from "sonner";
+import icon from "@/assets/pilot.png";
 
 // Define the form schema with validation
 const profileFormSchema = z.object({
@@ -55,7 +56,7 @@ type ProfileFormValues = z.infer<typeof profileFormSchema>
 
 // Default values for the form
 const defaultValues: ProfileFormValues = {
-  fullName: "Johnatan Smith",
+  fullName: "Sajid Khan",
   email: "example@example.com",
   phone: "(097) 234-5678",
   mobile: "(098) 765-4321",
@@ -142,11 +143,11 @@ export function ProfileForm() {
   return (
     <>
       {/* Left Column - Profile Card */}
-      <Card className="md:col-span-1">
+      <Card className="">
         <CardContent className="flex flex-col items-center pt-6">
           <div className="w-32 h-32 relative mb-4">
             <Image
-              src="/placeholder.svg?height=128&width=128"
+              src={icon}
               alt="Profile avatar"
               width={128}
               height={128}
@@ -224,7 +225,7 @@ export function ProfileForm() {
       </Card>
 
       {/* Right Column - Info and Projects */}
-      <div className="md:col-span-2 space-y-6">
+      <div className="col-span-2 space-y-6">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <TabsList className="grid grid-cols-4 mb-4">
             <TabsTrigger value="profile">
