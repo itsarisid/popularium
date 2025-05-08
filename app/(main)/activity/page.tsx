@@ -1,5 +1,10 @@
+import PageContainer from "@/layout/page-container";
+import { ActivityLogs } from "./components/activity-logs";
+
 export default function ActivityPage() {
     return (
-      <h1>Activity</h1>
+      <PageContainer>
+          <ActivityLogs />
+      </PageContainer>
     )
   }
