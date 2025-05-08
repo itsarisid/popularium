@@ -1,6 +1,10 @@
+import PageContainer from "@/layout/page-container";
+import { PermissionManagement } from "./components/permission-management";
 
 export default function PermissionsPage() {
     return (
-     <h1>Permission</h1>
+      <PageContainer>
+      <PermissionManagement />
+    </PageContainer>
     )
   }
