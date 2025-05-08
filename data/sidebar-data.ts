@@ -1,5 +1,5 @@
 import { SidebarData } from '@/models/types'
-  import { Gauge, SnailIcon, SquareUserRound } from 'lucide-react'
+  import { ActivitySquare, Gauge, LayoutDashboard, Lock, ShieldCheck, SnailIcon, SquareUserRound } from 'lucide-react'
   
   export const sidebarData: SidebarData = {
     user: {
@@ -27,6 +27,26 @@ import { SidebarData } from '@/models/types'
             title: 'Users',
             url: '/users',
             icon: SquareUserRound,
+          },
+          {
+            title: 'Roles',
+            url: '/roles',
+            icon: ShieldCheck,
+          },
+          {
+            title: 'Permissions',
+            url: '/permissions',
+            icon: Lock,
+          },
+          {
+            title: 'Activity Logs',
+            url: '/activity',
+            icon: ActivitySquare,
+          },
+          {
+            title: 'Dashboard',
+            url: '/user-dashboard',
+            icon: LayoutDashboard,
           },
         ],
       },
