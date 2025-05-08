@@ -113,7 +113,7 @@ export function ActivityLogs() {
   const uniqueActions = Array.from(new Set(logs.map((log) => log.action)))
 
   return (
-    <div className="space-y-6">
+    <div className="flex flex-1 flex-col space-y-2">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
           <h1 className="text-2xl font-bold tracking-tight">Activity Logs</h1>
@@ -121,7 +121,7 @@ export function ActivityLogs() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-3 gap-4">
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium">Total Events</CardTitle>
