@@ -1,5 +1,10 @@
+import PageContainer from "@/layout/page-container";
+import { RoleManagement } from "./components/role-management";
+
 export default function RolesPage() {
-    return (
-      <h1>Role</h1>
-    )
-  }
+  return (
+    <PageContainer>
+      <RoleManagement />
+    </PageContainer>
+  );
+}
