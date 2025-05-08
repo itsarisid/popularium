@@ -1,3 +1,10 @@
-export function UserDashboard() { return (
-    <h1>Dash</h1>
-  )}
+import PageContainer from "@/layout/page-container";
+import { UserDashboard } from "./components/user-dashboard";
+
+export default function UserDashboardPage() {
+  return (
+    <PageContainer>
+      <UserDashboard />
+    </PageContainer>
+  );
+}
